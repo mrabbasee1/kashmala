@@ -1,133 +1,137 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <title>Kashmala ke Liye 💗</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Dancing+Script:wght@500;700&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&amp;family=Dancing+Script:wght@500;700&amp;family=Cinzel:wght@400;600&amp;display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
 :root{
-  --rose:#e8436a;--deep-rose:#9c1b3a;--gold:#f5c842;--soft-gold:#fde99a;
-  --cream:#fff8f2;--deep:#06010e;--mid:#140828;--glow:rgba(232,67,106,0.35);
-  --gold-glow:rgba(245,200,66,0.4);
+  --rose:#e8436a;--deep-rose:#9c1b3a;--gold:#f5c842;
+  --deep:#06010e;--glow:rgba(232,67,106,0.35);--gold-glow:rgba(245,200,66,0.4);
 }
 html{scroll-behavior:smooth;scroll-snap-type:y mandatory}
-body{background:var(--deep);font-family:'Cormorant Garamond',serif;overflow-x:hidden;cursor:none}
+body{background:var(--deep);font-family:'Cormorant Garamond',serif;overflow-x:hidden}
 
-#cur{width:16px;height:16px;background:var(--rose);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);box-shadow:0 0 12px var(--rose),0 0 30px var(--rose);transition:width .15s,height .15s}
-#cur2{width:6px;height:6px;background:var(--gold);border-radius:50%;position:fixed;pointer-events:none;z-index:9998;transform:translate(-50%,-50%)}
 #bgCanvas{position:fixed;inset:0;z-index:0;pointer-events:none}
-.petal{position:fixed;pointer-events:none;z-index:1;animation:petalFall linear infinite;opacity:.7}
-@keyframes petalFall{0%{transform:translateY(-5vh) rotate(0deg) translateX(0);opacity:0}8%{opacity:.8}92%{opacity:.4}100%{transform:translateY(108vh) rotate(600deg) translateX(80px);opacity:0}}
+.petal{position:fixed;pointer-events:none;z-index:1;animation:petalFall linear infinite;opacity:.7;font-size:1.1rem}
+@keyframes petalFall{0%{transform:translateY(-5vh) rotate(0deg);opacity:0}8%{opacity:.8}92%{opacity:.4}100%{transform:translateY(108vh) rotate(600deg) translateX(70px);opacity:0}}
 
-.ndots{position:fixed;right:22px;top:50%;transform:translateY(-50%);z-index:200;display:flex;flex-direction:column;gap:14px}
-.nd{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.4);cursor:pointer;transition:all .3s}
-.nd.on{background:var(--rose);transform:scale(1.6);box-shadow:0 0 10px var(--rose)}
+/* NAV DOTS */
+.ndots{position:fixed;right:18px;top:50%;transform:translateY(-50%);z-index:200;display:flex;flex-direction:column;gap:14px}
+.nd{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.4);cursor:pointer;transition:all .3s;touch-action:manipulation}
+.nd.on{background:var(--rose);transform:scale(1.5);box-shadow:0 0 10px var(--rose)}
 
-section{position:relative;z-index:2;min-height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:70px 24px;scroll-snap-align:start}
+/* SECTIONS */
+section{position:relative;z-index:2;min-height:100vh;display:flex;align-items:center;justify-content:center;flex-direction:column;padding:80px 30px;scroll-snap-align:start;width:100%}
 
-/* S1 */
-#s1{background:radial-gradient(ellipse 80% 60% at 50% 40%,#2b0a1c 0%,var(--deep) 75%)}
-.s1-heart{font-size:4.5rem;filter:drop-shadow(0 0 25px var(--rose));animation:riseUp .8s ease .1s both,heartBeat 1.4s ease 1s infinite;margin-bottom:22px}
-.s1-top{font-family:'Dancing Script',cursive;color:var(--gold);font-size:1.3rem;letter-spacing:4px;text-transform:uppercase;animation:riseUp .9s ease .4s both}
-.s1-name{font-family:'Cinzel',serif;font-size:clamp(4rem,14vw,9rem);font-weight:600;color:#fff;line-height:.95;letter-spacing:-2px;animation:riseUp 1s ease .9s both;text-shadow:0 0 80px var(--glow),0 0 160px rgba(232,67,106,.2)}
+/* ══ S1 INTRO ══ */
+#s1{background:radial-gradient(ellipse 80% 60% at 50% 40%,#2b0a1c 0%,var(--deep) 75%);text-align:center;gap:16px}
+.s1-heart{font-size:5rem;filter:drop-shadow(0 0 25px var(--rose));animation:riseUp .8s ease .1s both,heartBeat 1.4s ease 1.2s infinite}
+.s1-top{font-family:'Dancing Script',cursive;color:var(--gold);font-size:clamp(1.1rem,3.5vw,1.5rem);letter-spacing:4px;animation:riseUp .9s ease .4s both}
+.s1-name{font-family:'Cinzel',serif;font-size:clamp(3.8rem,16vw,9.5rem);font-weight:600;color:#fff;line-height:.95;animation:riseUp 1s ease .9s both;text-shadow:0 0 80px var(--glow),0 0 160px rgba(232,67,106,.2)}
 .s1-name em{color:var(--rose);font-style:normal}
-.s1-sub{font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(255,255,255,.5);font-size:1.25rem;letter-spacing:2px;margin-top:16px;animation:riseUp .9s ease 1.4s both}
-.scroll-down{position:absolute;bottom:32px;display:flex;flex-direction:column;align-items:center;gap:6px;color:rgba(255,255,255,.3);font-size:.75rem;letter-spacing:3px;animation:bob 2s ease infinite}
-.scroll-arrow{width:1px;height:40px;background:linear-gradient(to bottom,transparent,rgba(255,255,255,.5));margin:0 auto}
+.s1-sub{font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(255,255,255,.5);font-size:clamp(1rem,3vw,1.3rem);letter-spacing:2px;animation:riseUp .9s ease 1.4s both}
+.scroll-down{position:absolute;bottom:28px;display:flex;flex-direction:column;align-items:center;gap:6px;color:rgba(255,255,255,.35);font-size:.75rem;letter-spacing:3px;animation:bob 2s ease infinite}
+.scroll-arrow{width:1px;height:36px;background:linear-gradient(to bottom,transparent,rgba(255,255,255,.5));margin:0 auto}
 @keyframes riseUp{from{opacity:0;transform:translateY(35px)}to{opacity:1;transform:translateY(0)}}
-@keyframes heartBeat{0%,100%{transform:scale(1)}14%{transform:scale(1.22)}28%{transform:scale(1)}42%{transform:scale(1.16)}70%{transform:scale(1)}}
+@keyframes heartBeat{0%,100%{transform:scale(1)}14%{transform:scale(1.22)}28%{transform:scale(1)}42%{transform:scale(1.15)}70%{transform:scale(1)}}
 @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(10px)}}
 
-/* S2 */
-#s2{background:linear-gradient(180deg,var(--deep) 0%,#0b0222 100%);gap:50px}
-.galaxy-wrap{position:relative;width:300px;height:300px;margin:0 auto;flex-shrink:0}
+/* ══ S2 SHAYARI ══ */
+#s2{background:linear-gradient(180deg,var(--deep) 0%,#0b0222 100%);gap:44px}
+.galaxy-wrap{position:relative;width:clamp(240px,60vw,320px);height:clamp(240px,60vw,320px);margin:0 auto;flex-shrink:0}
 .gring{position:absolute;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);animation:spin linear infinite}
-.gring::after{content:'✦';position:absolute;top:-9px;left:50%;transform:translateX(-50%);color:var(--gold);font-size:14px;text-shadow:0 0 8px var(--gold)}
-.gring:nth-child(1){width:70px;height:70px;border:1px solid rgba(232,67,106,.7);animation-duration:3s}
-.gring:nth-child(2){width:130px;height:130px;border:1px solid rgba(245,200,66,.4);animation-duration:6s}
-.gring:nth-child(3){width:200px;height:200px;border:1px solid rgba(255,255,255,.15);animation-duration:10s}
-.gring:nth-child(4){width:275px;height:275px;border:1px solid rgba(232,67,106,.2);animation-duration:16s}
-.gcenter{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:3.5rem;filter:drop-shadow(0 0 20px var(--rose));animation:pulseGlow 2s ease infinite}
+.gring::after{content:'✦';position:absolute;top:-10px;left:50%;transform:translateX(-50%);color:var(--gold);font-size:13px;text-shadow:0 0 8px var(--gold)}
+.gring:nth-child(1){width:64px;height:64px;border:1.5px solid rgba(232,67,106,.8);animation-duration:3s}
+.gring:nth-child(2){width:120px;height:120px;border:1px solid rgba(245,200,66,.45);animation-duration:6s}
+.gring:nth-child(3){width:185px;height:185px;border:1px solid rgba(255,255,255,.18);animation-duration:10s}
+.gring:nth-child(4){width:255px;height:255px;border:1px solid rgba(232,67,106,.22);animation-duration:16s}
+.gcenter{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:3.5rem;filter:drop-shadow(0 0 20px var(--rose));animation:pG 2s ease infinite}
 @keyframes spin{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(360deg)}}
-@keyframes pulseGlow{0%,100%{filter:drop-shadow(0 0 15px var(--rose))}50%{filter:drop-shadow(0 0 35px var(--rose))}}
+@keyframes pG{0%,100%{filter:drop-shadow(0 0 15px var(--rose))}50%{filter:drop-shadow(0 0 35px var(--rose))}}
 
-.shayari{text-align:center;max-width:620px;display:flex;flex-direction:column;gap:20px}
-.sh-line{font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(255,255,255,.85);font-size:clamp(1.1rem,3vw,1.55rem);line-height:1.6;letter-spacing:.5px;opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease;padding:0 20px}
-.sh-line::before{content:'"';color:var(--rose);font-size:2.5rem;line-height:0;vertical-align:-.5rem;margin-right:5px}
+.shayari{text-align:center;max-width:700px;width:100%;display:flex;flex-direction:column;gap:18px;padding:0 10px}
+.sh-line{font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(255,255,255,.88);font-size:clamp(1.15rem,3.5vw,1.65rem);line-height:1.7;opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.sh-line::before{content:'"';color:var(--rose);font-size:2.2rem;line-height:0;vertical-align:-.45rem;margin-right:4px}
 .sh-line.vis{opacity:1;transform:translateY(0)}
-.sh-line.gold{color:var(--gold);font-size:clamp(1.2rem,3.2vw,1.7rem)}
+.sh-line.gold{color:var(--gold);font-size:clamp(1.2rem,4vw,1.75rem)}
 
-/* S3 */
-#s3{background:radial-gradient(ellipse 70% 80% at 30% 50%,#1b0830 0%,#050112 100%)}
-.sec-title{font-family:'Dancing Script',cursive;color:var(--gold);font-size:clamp(2rem,6vw,3.2rem);text-align:center;margin-bottom:50px;text-shadow:0 0 25px var(--gold-glow)}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:22px;max-width:880px;width:100%}
-.card{background:linear-gradient(135deg,rgba(255,255,255,.05) 0%,rgba(232,67,106,.07) 100%);border:1px solid rgba(245,200,66,.18);border-radius:22px;padding:34px 26px;text-align:center;backdrop-filter:blur(12px);opacity:0;transform:translateY(50px) scale(.95);transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
+/* ══ S3 WAJUHAAT ══ */
+#s3{background:radial-gradient(ellipse 70% 80% at 30% 50%,#1b0830 0%,#050112 100%);gap:0}
+.sec-title{font-family:'Dancing Script',cursive;color:var(--gold);font-size:clamp(2rem,7vw,3.5rem);text-align:center;margin-bottom:44px;text-shadow:0 0 25px var(--gold-glow)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:24px;max-width:960px;width:100%}
+.card{background:linear-gradient(135deg,rgba(255,255,255,.055),rgba(232,67,106,.075));border:1px solid rgba(245,200,66,.18);border-radius:24px;padding:38px 30px;text-align:center;backdrop-filter:blur(12px);opacity:0;transform:translateY(50px) scale(.95);transition:transform .35s ease,box-shadow .35s ease,border-color .35s ease}
 .card.vis{animation:cardIn .7s ease forwards}
 @keyframes cardIn{to{opacity:1;transform:translateY(0) scale(1)}}
-.card:hover{transform:translateY(-10px) scale(1.03);box-shadow:0 24px 70px rgba(232,67,106,.28);border-color:rgba(232,67,106,.45)}
-.card-ico{font-size:2.8rem;margin-bottom:14px;display:block}
-.card-h{font-family:'Dancing Script',cursive;color:var(--rose);font-size:1.45rem;margin-bottom:10px}
-.card-p{color:rgba(255,255,255,.7);font-size:.98rem;line-height:1.75;font-style:italic}
+.card:hover,.card:active{transform:translateY(-8px) scale(1.02);box-shadow:0 20px 60px rgba(232,67,106,.28);border-color:rgba(232,67,106,.45)}
+.card-ico{font-size:3rem;margin-bottom:16px;display:block}
+.card-h{font-family:'Dancing Script',cursive;color:var(--rose);font-size:1.6rem;margin-bottom:12px}
+.card-p{color:rgba(255,255,255,.72);font-size:1.05rem;line-height:1.8;font-style:italic}
 
-/* S4 */
-#s4{background:linear-gradient(180deg,#050112 0%,#110520 50%,#050112 100%)}
-.letter-box{max-width:680px;width:100%;background:linear-gradient(145deg,rgba(255,248,240,.06),rgba(232,67,106,.05));border:1px solid rgba(245,200,66,.22);border-radius:28px;padding:52px 44px;position:relative;overflow:hidden}
-.letter-box::before{content:'❝';position:absolute;top:8px;left:18px;font-size:7rem;color:rgba(232,67,106,.1);font-family:Georgia,serif;line-height:1;pointer-events:none}
-.letter-p{font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(255,255,255,.88);font-size:clamp(1.05rem,2.5vw,1.3rem);line-height:2.3;text-align:left}
+/* ══ S4 KHAT ══ */
+#s4{background:linear-gradient(180deg,#050112 0%,#110520 50%,#050112 100%);gap:36px}
+.letter-box{max-width:780px;width:100%;background:linear-gradient(145deg,rgba(255,248,240,.065),rgba(232,67,106,.05));border:1px solid rgba(245,200,66,.24);border-radius:32px;padding:60px 52px;position:relative;overflow:hidden}
+.letter-box::before{content:'❝';position:absolute;top:6px;left:16px;font-size:8rem;color:rgba(232,67,106,.1);font-family:Georgia,serif;line-height:1;pointer-events:none}
+.letter-p{font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(255,255,255,.9);font-size:clamp(1.1rem,2.8vw,1.4rem);line-height:2.4;text-align:left}
 .letter-p strong{color:var(--gold);font-style:normal;font-weight:600}
-.letter-p .br{display:block;height:14px}
-.sig{font-family:'Dancing Script',cursive;color:var(--rose);font-size:2.2rem;margin-top:28px;text-align:right;text-shadow:0 0 20px var(--glow)}
+.br{display:block;height:16px}
+.sig{font-family:'Dancing Script',cursive;color:var(--rose);font-size:clamp(1.8rem,5vw,2.6rem);margin-top:32px;text-align:right;text-shadow:0 0 20px var(--glow)}
 
-/* S5 */
-#s5{background:radial-gradient(ellipse at 50% 40%,#2e0012 0%,#0a0005 55%,#000 100%);overflow:hidden}
+/* ══ S5 PROPOSAL ══ */
+#s5{background:radial-gradient(ellipse at 50% 40%,#2e0012 0%,#0a0005 55%,#000 100%);gap:30px;overflow:hidden}
 .fheart{position:absolute;pointer-events:none;animation:floatUp linear infinite;opacity:0}
-@keyframes floatUp{0%{transform:translateY(100vh) scale(.5) rotate(0);opacity:0}10%{opacity:.6}90%{opacity:.2}100%{transform:translateY(-10vh) scale(1.2) rotate(20deg);opacity:0}}
+@keyframes floatUp{0%{transform:translateY(100vh) scale(.5) rotate(0);opacity:0}10%{opacity:.55}90%{opacity:.18}100%{transform:translateY(-10vh) scale(1.2) rotate(20deg);opacity:0}}
 
-.ring-wrap{position:relative;width:240px;height:240px;margin:0 auto 44px;cursor:pointer}
-.ring-glow{position:absolute;inset:-20px;border-radius:50%;background:radial-gradient(circle,rgba(245,200,66,.2) 0%,transparent 70%);animation:ringGP 3s ease infinite}
-@keyframes ringGP{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.1)}}
-.ring-out{width:240px;height:240px;border-radius:50%;background:conic-gradient(#c9a227,#f7d070,#e8b86d,#fde99a,#c9a227,#f5c842,#c9a227);display:flex;align-items:center;justify-content:center;box-shadow:0 0 50px rgba(245,200,66,.4),0 0 100px rgba(232,67,106,.2),inset 0 0 40px rgba(0,0,0,.5);animation:ringP 4s ease infinite;transition:transform .4s ease;position:relative;z-index:1}
-.ring-out:hover{transform:scale(1.1) rotate(10deg)}
-@keyframes ringP{0%,100%{box-shadow:0 0 50px rgba(245,200,66,.4),0 0 100px rgba(232,67,106,.2)}50%{box-shadow:0 0 80px rgba(245,200,66,.7),0 0 150px rgba(232,67,106,.4)}}
-.ring-in{width:175px;height:175px;border-radius:50%;background:radial-gradient(circle at 40% 35%,#1e0a10,#0a0005);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px}
-.ring-gem{font-size:4rem;animation:gemS 2s ease infinite}
-@keyframes gemS{0%,100%{filter:drop-shadow(0 0 8px rgba(245,200,66,.5));transform:scale(1)}50%{filter:drop-shadow(0 0 25px rgba(245,200,66,1));transform:scale(1.1)}}
-.ring-tap{font-family:'Dancing Script',cursive;color:rgba(245,200,66,.7);font-size:.85rem;letter-spacing:1px}
+.ring-wrap{position:relative;width:clamp(200px,55vw,260px);height:clamp(200px,55vw,260px);margin:0 auto;cursor:pointer;touch-action:manipulation;flex-shrink:0}
+.ring-glow{position:absolute;inset:-22px;border-radius:50%;background:radial-gradient(circle,rgba(245,200,66,.22) 0%,transparent 70%);animation:rgp 3s ease infinite}
+@keyframes rgp{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.12)}}
+.ring-out{width:100%;height:100%;border-radius:50%;background:conic-gradient(#c9a227,#f7d070,#e8b86d,#fde99a,#c9a227,#f5c842,#c9a227);display:flex;align-items:center;justify-content:center;box-shadow:0 0 50px rgba(245,200,66,.4),0 0 100px rgba(232,67,106,.2),inset 0 0 40px rgba(0,0,0,.5);animation:rP 4s ease infinite;transition:transform .4s ease;position:relative;z-index:1}
+@keyframes rP{0%,100%{box-shadow:0 0 50px rgba(245,200,66,.4),0 0 100px rgba(232,67,106,.2)}50%{box-shadow:0 0 80px rgba(245,200,66,.7),0 0 150px rgba(232,67,106,.4)}}
+.ring-in{width:72%;height:72%;border-radius:50%;background:radial-gradient(circle at 40% 35%,#1e0a10,#0a0005);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px}
+.ring-gem{font-size:clamp(2.8rem,8vw,4.2rem);animation:gS 2s ease infinite}
+@keyframes gS{0%,100%{filter:drop-shadow(0 0 8px rgba(245,200,66,.5));transform:scale(1)}50%{filter:drop-shadow(0 0 25px rgba(245,200,66,1));transform:scale(1.1)}}
+.ring-tap{font-family:'Dancing Script',cursive;color:rgba(245,200,66,.75);font-size:.9rem;letter-spacing:1px}
 
-.prop-q{font-family:'Dancing Script',cursive;font-size:clamp(2.2rem,7vw,4.8rem);color:#fff;text-align:center;line-height:1.25;margin-bottom:20px;text-shadow:0 0 50px var(--glow)}
+.prop-q{font-family:'Dancing Script',cursive;font-size:clamp(2.4rem,8vw,5.2rem);color:#fff;text-align:center;line-height:1.2;text-shadow:0 0 50px var(--glow)}
 .prop-q span{color:var(--rose)}
-.prop-sub{font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(255,255,255,.6);font-size:1.15rem;text-align:center;line-height:1.9;max-width:520px;margin-bottom:50px}
+.prop-sub{font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(255,255,255,.62);font-size:clamp(1rem,3vw,1.2rem);text-align:center;line-height:2;max-width:520px}
 .prop-sub strong{color:var(--gold)}
 
-.btns{display:flex;gap:22px;justify-content:center;flex-wrap:wrap;align-items:center}
-.btn-haan{padding:20px 56px;background:linear-gradient(135deg,var(--rose),var(--deep-rose));color:#fff;font-family:'Dancing Script',cursive;font-size:1.8rem;border:none;border-radius:60px;cursor:pointer;box-shadow:0 12px 45px rgba(232,67,106,.5);transition:all .3s ease;position:relative;overflow:hidden}
-.btn-haan:hover{transform:scale(1.08);box-shadow:0 18px 65px rgba(232,67,106,.7)}
-.btn-nahi{padding:14px 34px;background:transparent;color:rgba(255,255,255,.35);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;border:1px solid rgba(255,255,255,.2);border-radius:50px;cursor:pointer;transition:all .25s ease}
-.btn-nahi:hover{transform:scale(.85) rotate(-8deg);opacity:.4}
+.btns{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;align-items:center;position:relative;min-height:80px}
+.btn-haan{padding:22px 60px;background:linear-gradient(135deg,var(--rose),var(--deep-rose));color:#fff;font-family:'Dancing Script',cursive;font-size:clamp(1.5rem,5vw,2rem);border:none;border-radius:60px;cursor:pointer;box-shadow:0 12px 45px rgba(232,67,106,.5);transition:all .3s ease;touch-action:manipulation;-webkit-appearance:none}
+.btn-haan:hover,.btn-haan:active{transform:scale(1.08);box-shadow:0 18px 65px rgba(232,67,106,.7)}
+.btn-nahi{padding:14px 36px;background:transparent;color:rgba(255,255,255,.38);font-family:'Cormorant Garamond',serif;font-style:italic;font-size:1.1rem;border:1px solid rgba(255,255,255,.2);border-radius:50px;cursor:pointer;touch-action:manipulation;-webkit-appearance:none;transition:all .25s ease}
 
-#celeb{display:none;position:fixed;inset:0;z-index:1000;background:radial-gradient(ellipse at 50% 40%,#2e0015,#000);align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:40px}
+/* ══ CELEBRATION ══ */
+#celeb{display:none;position:fixed;inset:0;z-index:9999;background:radial-gradient(ellipse at 50% 40%,#2e0015,#000);align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:40px 24px;overflow:hidden}
 #celeb.on{display:flex;animation:fadeIn .6s ease}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-.celeb-heart{font-size:9rem;filter:drop-shadow(0 0 50px var(--rose));animation:bigBeat 1s ease infinite}
+.celeb-heart{font-size:clamp(5rem,18vw,9rem);filter:drop-shadow(0 0 50px var(--rose));animation:bigBeat 1s ease infinite}
 @keyframes bigBeat{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
-.celeb-title{font-family:'Dancing Script',cursive;color:var(--gold);font-size:clamp(2.5rem,8vw,5.5rem);margin:20px 0 8px;text-shadow:0 0 40px var(--gold-glow)}
-.celeb-msg{font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(255,255,255,.9);font-size:clamp(1rem,2.5vw,1.4rem);line-height:2.2;max-width:540px}
+.celeb-title{font-family:'Dancing Script',cursive;color:var(--gold);font-size:clamp(2.4rem,9vw,5.5rem);margin:18px 0 10px;text-shadow:0 0 40px var(--gold-glow)}
+.celeb-msg{font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(255,255,255,.92);font-size:clamp(1.05rem,3vw,1.5rem);line-height:2.1;max-width:560px}
 .celeb-msg strong{color:var(--gold)}
-.cf{position:fixed;pointer-events:none;animation:cfFall linear forwards}
+.celeb-close{margin-top:30px;padding:14px 40px;background:transparent;border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.6);font-family:'Dancing Script',cursive;font-size:1.2rem;border-radius:50px;cursor:pointer;touch-action:manipulation}
+
+.cf{position:fixed;pointer-events:none;animation:cfFall linear forwards;z-index:10000}
 @keyframes cfFall{0%{transform:translateY(-20px) rotate(0);opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:0}}
 
-.mbtn{position:fixed;bottom:26px;right:26px;z-index:300;background:rgba(232,67,106,.15);border:1px solid var(--rose);color:#fff;padding:11px 20px;border-radius:50px;font-family:'Dancing Script',cursive;font-size:1rem;cursor:pointer;backdrop-filter:blur(10px);transition:all .3s;letter-spacing:1px}
-.mbtn:hover{background:rgba(232,67,106,.35);transform:scale(1.05)}
+.mbtn{position:fixed;bottom:24px;right:24px;z-index:300;background:rgba(232,67,106,.15);border:1px solid var(--rose);color:#fff;padding:12px 22px;border-radius:50px;font-family:'Dancing Script',cursive;font-size:1.05rem;cursor:pointer;backdrop-filter:blur(10px);transition:all .3s;letter-spacing:1px;touch-action:manipulation}
+.mbtn:active{background:rgba(232,67,106,.35)}
 
-@media(max-width:600px){.letter-box{padding:36px 22px}.ndots{display:none}.ring-wrap,.ring-out{width:200px;height:200px}.ring-in{width:145px;height:145px}}
+/* MOBILE */
+@media(max-width:600px){
+  .letter-box{padding:38px 24px}
+  .ndots{display:none}
+  .cards{grid-template-columns:1fr}
+  .btn-haan{padding:20px 44px;width:100%;max-width:340px}
+  .btn-nahi{width:100%;max-width:340px;text-align:center}
+  .btns{flex-direction:column;align-items:center;gap:14px}
+}
 </style>
 </head>
 <body>
-<canvas id="bgCanvas"></canvas>
-<div id="cur"></div>
-<div id="cur2"></div>
+<canvas id="bgCanvas" width="989" height="788"></canvas>
 
 <nav class="ndots">
   <div class="nd on" onclick="goTo(0)"></div>
@@ -140,7 +144,7 @@ section{position:relative;z-index:2;min-height:100vh;display:flex;align-items:ce
 <!-- S1 INTRO -->
 <section id="s1">
   <div class="s1-heart">💗</div>
-
+  
   <h1 class="s1-name">Kash<em>mala</em></h1>
   <p class="s1-sub">— Ek Dil Ki Sachchi Awaaz —</p>
   <div class="scroll-down"><span>Neeche Aao</span><div class="scroll-arrow"></div></div>
@@ -154,10 +158,10 @@ section{position:relative;z-index:2;min-height:100vh;display:flex;align-items:ce
     <div class="gcenter">🌹</div>
   </div>
   <div class="shayari" id="shayari">
-    <p class="sh-line">Tum woh roshni ho jo andheron mein raah dikhati hai</p>
-    <p class="sh-line">Tum woh khwaab ho jo aankhein band karte hi nazar aata hai</p>
-    <p class="sh-line">Tum woh sukoon ho jo yeh dil barson se dhundhta tha</p>
-    <p class="sh-line gold">Tum meri zindagi ki <strong style="color:var(--rose)">sabse khoobsurat haqeeqat</strong> ho</p>
+    <p class="sh-line vis">Tum woh roshni ho jo andheron mein raah dikhati hai</p>
+    <p class="sh-line vis">Tum woh khwaab ho jo aankhein band karte hi nazar aata hai</p>
+    <p class="sh-line vis">Tum woh sukoon ho jo yeh dil barson se dhundhta tha</p>
+    <p class="sh-line gold vis">Tum meri zindagi ki <strong style="color:var(--rose)">sabse khoobsurat haqeeqat</strong> ho</p>
   </div>
 </section>
 
@@ -165,12 +169,12 @@ section{position:relative;z-index:2;min-height:100vh;display:flex;align-items:ce
 <section id="s3">
   <h2 class="sec-title">Tum Meri Duniya Kyun Ho? ✨</h2>
   <div class="cards" id="cards">
-    <div class="card"><span class="card-ico">🌙</span><p class="card-h">Teri Muskaan</p><p class="card-p">"Jab tum muskurati ho, lagta hai duniya ki saari khushiyan ek jagah ikathi ho gayi hain"</p></div>
-    <div class="card"><span class="card-ico">⭐</span><p class="card-h">Teri Achi Rooh</p><p class="card-p">"Tum sirf chehre se nahi — andar se bhi itni achhi ho ke dil khud kheench aata hai tumhari taraf"</p></div>
-    <div class="card"><span class="card-ico">🔥</span><p class="card-h">Meri Taaqat</p><p class="card-p">"Jab bhi main thak jaata hun, tera khayal hi mujhe phir se uthata hai — tum meri asli himmat ho"</p></div>
-    <div class="card"><span class="card-ico">🌸</span><p class="card-h">Mera Sukoon</p><p class="card-p">"Is shor bhari duniya mein, sirf tera naam sunke dil ko ajeeb si chain aa jaati hai"</p></div>
-    <div class="card"><span class="card-ico">💎</span><p class="card-h">Mera Fakhr</p><p class="card-p">"Main sab ko bata dena chahta hun ke meri zindagi mein tum ho — yeh meri sabse badi daulat hai"</p></div>
-    <div class="card"><span class="card-ico">🌊</span><p class="card-h">Meri Poori Kahani</p><p class="card-p">"Meri har kahani ka akhri safha tum hoti ho — mere liye koi doosra anjaam hi nahi"</p></div>
+    <div class="card vis"><span class="card-ico">🌙</span><p class="card-h">Teri Muskaan</p><p class="card-p">"Jab tum muskurati ho, lagta hai duniya ki saari khushiyan ek jagah ikathi ho gayi hain"</p></div>
+    <div class="card vis"><span class="card-ico">⭐</span><p class="card-h">Teri Achi Rooh</p><p class="card-p">"Tum sirf chehre se nahi — andar se bhi itni achhi ho ke dil khud kheench aata hai tumhari taraf"</p></div>
+    <div class="card vis"><span class="card-ico">🔥</span><p class="card-h">Meri Taaqat</p><p class="card-p">"Jab bhi main thak jaata hun, tera khayal hi mujhe phir se uthata hai — tum meri asli himmat ho"</p></div>
+    <div class="card vis"><span class="card-ico">🌸</span><p class="card-h">Mera Sukoon</p><p class="card-p">"Is shor bhari duniya mein, sirf tera naam sunke dil ko ajeeb si chain aa jaati hai"</p></div>
+    <div class="card vis"><span class="card-ico">💎</span><p class="card-h">Mera Fakhr</p><p class="card-p">"Main sab ko bata dena chahta hun ke meri zindagi mein tum ho — yeh meri sabse badi daulat hai"</p></div>
+    <div class="card vis"><span class="card-ico">🌊</span><p class="card-h">Meri Poori Kahani</p><p class="card-p">"Meri har kahani ka akhri safha tum hoti ho — mere liye koi doosra anjaam hi nahi"</p></div>
   </div>
 </section>
 
@@ -186,13 +190,12 @@ section{position:relative;z-index:2;min-height:100vh;display:flex;align-items:ce
       Tum meri zindagi mein aayeen to laga jaise koi adhoori kitaab mukammal ho gayi ho.
       Jaise kisi gaane ka woh bol mil gaya ho jo hamesha se gum tha.
       <span class="br"></span>
-      Main — <strong>Asmar</strong> — jo har roz tumhare baare mein sochta hun.
-      Jo chahta hun ke tumhari har khushi mein shareek hun.
-      Jo wada karta hun ke zindagi bhar tumhara haath thame rakhun ga.
+      Main — <strong>Asmar</strong> — jo har roz tumhare baare mein sochta hun,
+      jo chahta hun ke tumhari har khushi mein shareek hun,
+      jo wada karta hun ke zindagi bhar tumhara haath thame rakhun ga.
       <span class="br"></span>
-      Tum mere liye sirf zaroori nahi —
-      tum <strong>meri zindagi ki wajah</strong> ho.
-      Tum nahi to kuch bhi nahi.
+      Tum sirf mere liye zaroori nahi —
+      tum <strong>meri zindagi ki wajah</strong> ho. Tum nahi to kuch bhi nahi.
     </p>
     <p class="sig">— Tumhara Asmar 💗</p>
   </div>
@@ -202,24 +205,26 @@ section{position:relative;z-index:2;min-height:100vh;display:flex;align-items:ce
 <section id="s5">
   <div class="ring-wrap" id="ringWrap">
     <div class="ring-glow"></div>
-    <div class="ring-out" onclick="ringClick()">
+    <div class="ring-out" id="ringOut">
       <div class="ring-in">
         <span class="ring-gem">💍</span>
         <span class="ring-tap">Tap Karo</span>
       </div>
     </div>
   </div>
+
   <h2 class="prop-q">Kashmala,<br><span>Kya Tum Meri</span><br>Ho Jaogi? 💗</h2>
   <p class="prop-sub">
     Maine poori duniya dekhi —<br>
     par dil ne sirf <strong>tumhein</strong> chuna.<br>
-    Aaj, is lamhe, main tumse ek sawaal karna chahta hun.
+    Aaj main tumse ek sawaal karna chahta hun.
   </p>
-  <div class="btns">
-    <button class="btn-haan" onclick="sayYes()">💗 Haan, Main Tumhari Hun</button>
-    <button class="btn-nahi" id="nahiBtn" onmouseover="runAway(this)" onclick="runAway(this)">Nahi</button>
+
+  <div class="btns" id="btnsArea">
+    <button class="btn-haan" id="haanBtn">💗 Haan, Main Tumhari Hun</button>
+    <button class="btn-nahi" id="nahiBtn" style="position: fixed; z-index: 500; left: 62.8372px; top: 49.2475px; transition: left 0.25s, top 0.25s; display: none;">Nahi</button>
   </div>
-</section>
+<div class="fheart" style="left: 83.3774%; animation-duration: 6.14249s; animation-delay: 0.673488s; font-size: 1.34901rem;">💕</div><div class="fheart" style="left: 30.6847%; animation-duration: 10.7976s; animation-delay: 2.70422s; font-size: 1.61529rem;">💓</div><div class="fheart" style="left: 57.1695%; animation-duration: 13.9048s; animation-delay: 1.42385s; font-size: 1.80711rem;">💕</div><div class="fheart" style="left: 91.3518%; animation-duration: 12.1748s; animation-delay: 0.956279s; font-size: 0.955032rem;">💖</div><div class="fheart" style="left: 73.6814%; animation-duration: 7.13805s; animation-delay: 0.679309s; font-size: 1.05282rem;">💖</div><div class="fheart" style="left: 44.0306%; animation-duration: 11.9261s; animation-delay: 1.18476s; font-size: 1.23428rem;">❤️</div><div class="fheart" style="left: 55.4767%; animation-duration: 7.10107s; animation-delay: 1.91676s; font-size: 1.5888rem;">❤️</div><div class="fheart" style="left: 90.8713%; animation-duration: 9.45731s; animation-delay: 2.89411s; font-size: 1.52697rem;">💓</div><div class="fheart" style="left: 20.1235%; animation-duration: 12.7174s; animation-delay: 2.35731s; font-size: 2.06449rem;">💕</div><div class="fheart" style="left: 6.49329%; animation-duration: 10.707s; animation-delay: 1.43478s; font-size: 1.35412rem;">💕</div><div class="fheart" style="left: 78.6328%; animation-duration: 9.43841s; animation-delay: 2.52018s; font-size: 0.831713rem;">❤️</div><div class="fheart" style="left: 59.2396%; animation-duration: 11.9722s; animation-delay: 1.01654s; font-size: 1.80508rem;">💗</div><div class="fheart" style="left: 10.5158%; animation-duration: 8.87105s; animation-delay: 2.98745s; font-size: 1.01281rem;">💖</div><div class="fheart" style="left: 84.2618%; animation-duration: 7.62378s; animation-delay: 2.78738s; font-size: 1.62888rem;">❤️</div><div class="fheart" style="left: 58.5208%; animation-duration: 11.1682s; animation-delay: 2.6035s; font-size: 2.07169rem;">💓</div><div class="fheart" style="left: 20.3126%; animation-duration: 7.51255s; animation-delay: 2.11347s; font-size: 1.42524rem;">💓</div></section>
 
 <!-- CELEBRATION -->
 <div id="celeb">
@@ -233,120 +238,153 @@ section{position:relative;z-index:2;min-height:100vh;display:flex;align-items:ce
     Hamesha ke liye. ❤️<br><br>
     — Tumhara Asmar 💍
   </p>
+  <button class="celeb-close" onclick="document.getElementById('celeb').classList.remove('on')">Wapas Jaao</button>
 </div>
 
-<button class="mbtn" id="mbtn" onclick="toggleMusic()">🎵 Music On</button>
+<button class="mbtn" id="mbtn">🎵 Music On</button>
 
 <script>
-// CANVAS
+// ── CANVAS STARS ──
 const cv=document.getElementById('bgCanvas'),cx=cv.getContext('2d');
-let W=cv.width=window.innerWidth,H=cv.height=window.innerHeight;
-window.addEventListener('resize',()=>{W=cv.width=window.innerWidth;H=cv.height=window.innerHeight;buildS()});
-let stars=[];
-function buildS(){stars=Array.from({length:260},()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.6+.2,a:Math.random(),sp:Math.random()*.007+.002,g:Math.random()>.85}))}
-buildS();
+let W,H;
+function resize(){W=cv.width=window.innerWidth;H=cv.height=window.innerHeight}
+resize();window.addEventListener('resize',resize);
+const stars=Array.from({length:240},()=>({x:Math.random()*window.innerWidth,y:Math.random()*window.innerHeight,r:Math.random()*1.5+.3,a:Math.random(),sp:Math.random()*.006+.002,g:Math.random()>.85}));
 function drawBg(){
-  cx.clearRect(0,0,W,H);
-  [[W*.3,H*.3,200,'rgba(140,20,80,.06)'],[W*.7,H*.6,250,'rgba(60,10,140,.05)'],[W*.5,H*.8,180,'rgba(232,67,106,.04)']].forEach(([nx,ny,nr,nc])=>{
+  cv.width=W; // clear
+  [[W*.3,H*.3,200,'rgba(140,20,80,.06)'],[W*.7,H*.6,260,'rgba(60,10,140,.05)'],[W*.5,H*.85,180,'rgba(232,67,106,.04)']].forEach(([nx,ny,nr,nc])=>{
     const g=cx.createRadialGradient(nx,ny,0,nx,ny,nr);g.addColorStop(0,nc);g.addColorStop(1,'transparent');cx.fillStyle=g;cx.fillRect(0,0,W,H);
   });
-  stars.forEach(s=>{s.a+=s.sp;if(s.a>1||s.a<0)s.sp*=-1;cx.beginPath();cx.arc(s.x,s.y,s.r,0,Math.PI*2);cx.fillStyle=s.g?`rgba(245,200,66,${Math.abs(s.a).toFixed(2)})`:`rgba(255,255,255,${Math.abs(s.a).toFixed(2)})`;cx.fill()});
+  stars.forEach(s=>{
+    s.a+=s.sp;if(s.a>1||s.a<0)s.sp*=-1;
+    cx.beginPath();cx.arc(s.x,s.y,s.r,0,Math.PI*2);
+    cx.fillStyle=s.g?`rgba(245,200,66,${Math.abs(s.a).toFixed(2)})`:`rgba(255,255,255,${Math.abs(s.a).toFixed(2)})`;
+    cx.fill();
+  });
   requestAnimationFrame(drawBg);
 }
 drawBg();
 
-// CURSOR
-const cur=document.getElementById('cur'),cur2=document.getElementById('cur2');
-let mx=W/2,my=H/2,t2x=mx,t2y=my;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px'});
-(function mc2(){t2x+=(mx-t2x)*.12;t2y+=(my-t2y)*.12;cur2.style.left=t2x+'px';cur2.style.top=t2y+'px';requestAnimationFrame(mc2)})();
+// ── PETALS ──
+const PE=['🌸','🌺','🌹','✨','💫','🌷'];
+function spawnP(){
+  const p=document.createElement('div');p.className='petal';
+  p.textContent=PE[Math.floor(Math.random()*PE.length)];
+  p.style.cssText=`left:${Math.random()*100}vw;animation-duration:${Math.random()*9+7}s;animation-delay:${Math.random()*3}s;font-size:${Math.random()*1+.65}rem`;
+  document.body.appendChild(p);setTimeout(()=>p.remove(),15000);
+}
+setInterval(spawnP,750);
 
-// PETALS
-const PE=['🌸','🌺','🌹','✨','💫','🌷','⭐'];
-function spawnP(){const p=document.createElement('div');p.className='petal';p.textContent=PE[Math.floor(Math.random()*PE.length)];p.style.cssText=`left:${Math.random()*100}vw;animation-duration:${Math.random()*9+7}s;animation-delay:${Math.random()*4}s;font-size:${Math.random()*1+.7}rem`;document.body.appendChild(p);setTimeout(()=>p.remove(),16000)}
-setInterval(spawnP,700);
-
-// FLOATING HEARTS S5
+// ── FLOATING HEARTS S5 ──
 const s5el=document.getElementById('s5');
-function spawnFH(){const h=document.createElement('div');h.className='fheart';h.textContent=['💗','💖','💕','❤️','💓'][Math.floor(Math.random()*5)];h.style.cssText=`left:${Math.random()*100}%;animation-duration:${Math.random()*8+6}s;animation-delay:${Math.random()*3}s;font-size:${Math.random()*1.5+.8}rem`;s5el.appendChild(h);setTimeout(()=>h.remove(),16000)}
-setInterval(spawnFH,900);
+function spawnFH(){
+  const h=document.createElement('div');h.className='fheart';
+  h.textContent=['💗','💖','💕','❤️','💓'][Math.floor(Math.random()*5)];
+  h.style.cssText=`left:${Math.random()*100}%;animation-duration:${Math.random()*8+6}s;animation-delay:${Math.random()*3}s;font-size:${Math.random()*1.6+.8}rem`;
+  s5el.appendChild(h);setTimeout(()=>h.remove(),16000);
+}
+setInterval(spawnFH,1000);
 
-// NAV
-const sIds=['s1','s2','s3','s4','s5'],dots=document.querySelectorAll('.nd'),secEls=sIds.map(id=>document.getElementById(id));
+// ── NAV ──
+const sIds=['s1','s2','s3','s4','s5'],dots=document.querySelectorAll('.nd');
 function goTo(i){document.getElementById(sIds[i]).scrollIntoView({behavior:'smooth'})}
 const io=new IntersectionObserver(entries=>{
   entries.forEach(e=>{
     if(!e.isIntersecting)return;
-    const i=secEls.indexOf(e.target);
+    const i=sIds.indexOf(e.target.id);
     if(i>-1)dots.forEach((d,j)=>d.classList.toggle('on',i===j));
-    if(e.target.id==='s2')setTimeout(()=>document.querySelectorAll('.sh-line').forEach((l,i)=>setTimeout(()=>l.classList.add('vis'),i*420)),200);
-    if(e.target.id==='s3')document.querySelectorAll('.card').forEach((c,i)=>setTimeout(()=>c.classList.add('vis'),i*130));
+    if(e.target.id==='s2'){
+      setTimeout(()=>document.querySelectorAll('.sh-line').forEach((l,idx)=>setTimeout(()=>l.classList.add('vis'),idx*420)),200);
+    }
+    if(e.target.id==='s3'){
+      document.querySelectorAll('.card').forEach((c,idx)=>setTimeout(()=>c.classList.add('vis'),idx*140));
+    }
   });
-},{threshold:.38});
-secEls.forEach(el=>io.observe(el));
+},{threshold:.35});
+sIds.forEach(id=>io.observe(document.getElementById(id)));
 
-// RING
+// ── RING — works on mobile too ──
 let ringed=false;
 function ringClick(){
   if(ringed)return;ringed=true;
-  const ro=document.querySelector('.ring-out');
-  ro.style.transition='transform 1s ease';ro.style.transform='scale(1.25) rotate(360deg)';
-  confetti(14);setTimeout(()=>{ro.style.transform='';ringed=false},1100);
+  const ro=document.getElementById('ringOut');
+  ro.style.transition='transform 1s ease';ro.style.transform='scale(1.2) rotate(360deg)';
+  confetti(16);
+  setTimeout(()=>{ro.style.transform='scale(1)';setTimeout(()=>{ro.style.transition='';ringed=false},400)},1000);
 }
+document.getElementById('ringOut').addEventListener('click',ringClick);
+document.getElementById('ringOut').addEventListener('touchend',e=>{e.preventDefault();ringClick()},{passive:false});
 
-// NAHI
+// ── NAHI BTN — mobile safe ──
 let noC=0;
-function runAway(btn){
-  noC++;const pw=window.innerWidth-140,ph=window.innerHeight-70;
+function runAway(){
+  noC++;
+  const btn=document.getElementById('nahiBtn');
+  const pw=Math.max(window.innerWidth-160,100),ph=Math.max(window.innerHeight-80,100);
   btn.style.position='fixed';btn.style.zIndex='500';
   btn.style.left=Math.random()*pw+'px';btn.style.top=Math.random()*ph+'px';
-  btn.style.transition='left .2s ease,top .2s ease';
+  btn.style.transition='left .25s ease,top .25s ease';
   if(noC>6)btn.style.display='none';
 }
+const nb=document.getElementById('nahiBtn');
+nb.addEventListener('mouseover',runAway);
+nb.addEventListener('touchstart',e=>{e.preventDefault();runAway()},{passive:false});
+nb.addEventListener('click',runAway);
 
-// YES
+// ── HAAN BTN — mobile safe ──
 function sayYes(){
   document.getElementById('celeb').classList.add('on');
-  confetti(90);const iv=setInterval(()=>confetti(18),1300);setTimeout(()=>clearInterval(iv),12000);
+  confetti(100);
+  const iv=setInterval(()=>confetti(20),1400);
+  setTimeout(()=>clearInterval(iv),12000);
 }
+const hb=document.getElementById('haanBtn');
+hb.addEventListener('click',sayYes);
+hb.addEventListener('touchend',e=>{e.preventDefault();sayYes()},{passive:false});
 
-// CONFETTI
+// ── CONFETTI ──
 function confetti(n){
-  const cols=['#e8436a','#f7c873','#fff','#ff85a1','#c9a227','#ff69b4','#ffd700'];
+  const cols=['#e8436a','#f7c873','#fff','#ff85a1','#c9a227','#ff69b4','#ffd700','#ff6b9d'];
   for(let i=0;i<n;i++)setTimeout(()=>{
     const c=document.createElement('div');c.className='cf';
-    c.style.cssText=`left:${Math.random()*100}vw;top:-20px;width:${Math.random()*10+5}px;height:${Math.random()*10+5}px;background:${cols[Math.floor(Math.random()*cols.length)]};border-radius:${Math.random()>.5?'50%':'2px'};animation-duration:${Math.random()*3+2}s;animation-delay:${Math.random()*.5}s`;
-    document.body.appendChild(c);setTimeout(()=>c.remove(),5500);
-  },i*28);
+    c.style.cssText=`left:${Math.random()*100}vw;top:-20px;width:${Math.random()*10+5}px;height:${Math.random()*10+5}px;background:${cols[Math.floor(Math.random()*cols.length)]};border-radius:${Math.random()>.5?'50%':'3px'};animation-duration:${Math.random()*3+2}s;animation-delay:${Math.random()*.4}s`;
+    document.body.appendChild(c);setTimeout(()=>c.remove(),6000);
+  },i*25);
 }
 
-// MUSIC
-let actx,playing=false,gn,melTimer;
+// ── MUSIC ──
+let actx,playing=false,gn,mTimer;
 const mel=[261.63,293.66,329.63,349.23,392,440,349.23,329.63];let mi=0;
 function playNote(){
-  if(!playing)return;const f=mel[mi%mel.length];mi++;
+  if(!playing)return;
+  const f=mel[mi%mel.length];mi++;
   const o=actx.createOscillator(),g=actx.createGain();
   o.type='triangle';o.frequency.value=f;
-  g.gain.setValueAtTime(0,actx.currentTime);g.gain.linearRampToValueAtTime(.055,actx.currentTime+.09);g.gain.linearRampToValueAtTime(0,actx.currentTime+.75);
+  g.gain.setValueAtTime(0,actx.currentTime);
+  g.gain.linearRampToValueAtTime(.055,actx.currentTime+.09);
+  g.gain.linearRampToValueAtTime(0,actx.currentTime+.75);
   o.connect(g);g.connect(gn);o.start();o.stop(actx.currentTime+.9);
-  melTimer=setTimeout(playNote,650);
+  mTimer=setTimeout(playNote,660);
 }
-function addDrone(f){const o=actx.createOscillator(),g=actx.createGain();o.type='sine';o.frequency.value=f;g.gain.value=.025;o.connect(g);g.connect(gn);o.start();return o}
 let drones=[];
+function addDrone(f){const o=actx.createOscillator(),g=actx.createGain();o.type='sine';o.frequency.value=f;g.gain.value=.025;o.connect(g);g.connect(gn);o.start();return o}
 function toggleMusic(){
   const btn=document.getElementById('mbtn');
   if(!actx)actx=new(window.AudioContext||window.webkitAudioContext)();
-  if(!gn){gn=actx.createGain();gn.gain.value=.5;gn.connect(actx.destination)}
+  if(!gn){gn=actx.createGain();gn.gain.value=0;gn.connect(actx.destination)}
   if(!playing){
     playing=true;btn.textContent='🎵 Music Off';
-    gn.gain.setValueAtTime(0,actx.currentTime);gn.gain.linearRampToValueAtTime(.5,actx.currentTime+.8);
+    gn.gain.linearRampToValueAtTime(.5,actx.currentTime+.8);
     drones=[addDrone(130.81),addDrone(98)];playNote();
   } else {
-    playing=false;btn.textContent='🎵 Music On';clearTimeout(melTimer);
-    gn.gain.setValueAtTime(gn.gain.value,actx.currentTime);gn.gain.linearRampToValueAtTime(0,actx.currentTime+.6);
-    setTimeout(()=>{drones.forEach(d=>d.stop());drones=[];gn=null},700);
+    playing=false;btn.textContent='🎵 Music On';clearTimeout(mTimer);
+    gn.gain.linearRampToValueAtTime(0,actx.currentTime+.6);
+    setTimeout(()=>{drones.forEach(d=>{try{d.stop()}catch(e){}});drones=[];gn=null},800);
   }
 }
+document.getElementById('mbtn').addEventListener('click',toggleMusic);
+document.getElementById('mbtn').addEventListener('touchend',e=>{e.preventDefault();toggleMusic()},{passive:false});
 </script>
-</body>
-</html>
+
+
+<div class="petal" style="left: 10.8768vw; animation-duration: 8.38933s; animation-delay: 0.619194s; font-size: 0.653024rem;">💫</div><div class="petal" style="left: 59.5887vw; animation-duration: 13.9335s; animation-delay: 2.34834s; font-size: 1.05477rem;">🌺</div><div class="petal" style="left: 18.9268vw; animation-duration: 9.83493s; animation-delay: 1.06846s; font-size: 0.781848rem;">🌷</div><div class="petal" style="left: 11.2104vw; animation-duration: 8.57071s; animation-delay: 2.22056s; font-size: 1.628rem;">🌹</div><div class="petal" style="left: 9.762vw; animation-duration: 15.1313s; animation-delay: 0.177215s; font-size: 0.771508rem;">💫</div><div class="petal" style="left: 60.9247vw; animation-duration: 8.10337s; animation-delay: 1.07536s; font-size: 1.38522rem;">🌸</div><div class="petal" style="left: 50.1578vw; animation-duration: 9.32577s; animation-delay: 1.31281s; font-size: 1.27161rem;">🌺</div><div class="petal" style="left: 44.0224vw; animation-duration: 8.7064s; animation-delay: 1.15015s; font-size: 0.678739rem;">🌸</div><div class="petal" style="left: 47.2247vw; animation-duration: 9.16408s; animation-delay: 1.50491s; font-size: 0.828555rem;">🌹</div><div class="petal" style="left: 57.1846vw; animation-duration: 12.2883s; animation-delay: 0.340676s; font-size: 1.20705rem;">🌸</div><div class="petal" style="left: 72.7021vw; animation-duration: 13.6381s; animation-delay: 0.363357s; font-size: 1.10074rem;">🌸</div><div class="petal" style="left: 32.644vw; animation-duration: 13.6018s; animation-delay: 2.05746s; font-size: 1.4962rem;">🌺</div><div class="petal" style="left: 71.7764vw; animation-duration: 7.27238s; animation-delay: 0.925969s; font-size: 0.801677rem;">🌹</div><div class="petal" style="left: 85.8615vw; animation-duration: 15.925s; animation-delay: 2.31428s; font-size: 1.16288rem;">🌸</div><div class="petal" style="left: 55.6793vw; animation-duration: 10.5218s; animation-delay: 1.42515s; font-size: 1.56955rem;">💫</div><div class="petal" style="left: 67.1132vw; animation-duration: 7.68357s; animation-delay: 1.04196s; font-size: 0.854828rem;">🌸</div><div class="petal" style="left: 59.1917vw; animation-duration: 12.2192s; animation-delay: 1.86442s; font-size: 1.1034rem;">🌺</div><div class="petal" style="left: 2.54324vw; animation-duration: 12.2413s; animation-delay: 1.74835s; font-size: 1.37846rem;">💫</div><div class="petal" style="left: 22.0739vw; animation-duration: 11.1723s; animation-delay: 1.00049s; font-size: 0.65906rem;">✨</div><div class="petal" style="left: 44.3744vw; animation-duration: 14.2399s; animation-delay: 0.71476s; font-size: 0.830692rem;">🌹</div></body></html>
